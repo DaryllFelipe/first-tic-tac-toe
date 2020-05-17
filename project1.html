@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="mainContainer">
+        <div class="landingpage" id="landingPage">
+            <h1>Project #1</h1>
+            <h2>Project #1 : Single Page Site</h2>
+            <br/>
+            <button id="btnSignUp">Sign Up</button>
+            <button id="btnLogIn">Log In</button>
+        </div>
+        <div class="signUp" id="signUp">
+            <form method="post" class="signUpForm" id="signUpForm">
+                <label for="firstName">First Name: </label><input id="firstName" type="text" name="firstName" required/><br/><br/>
+                <label for="lastName">Last Name: </label><input id="lastName" type="text" name="lastName" required/><br/><br/>
+                <label for="email">Email:</label><input id="email" type="email" name="email" required /><br/><br/>
+                <label for="pass">Password: </label><input id="password" type="password" name="pass" required/><br/><br/>
+                <input id="terms" type="checkbox" name="checkbox" required/><label for="checkbox">I agree to the Terms of Use</label> <br/><br/>
+                <button class="btnsubmit" id="btnsubmit" type="submit" disabled>Sign Up</button>
+                <p id="errorSignUp"></p>
+            </form>
+        </div>
+        <div class="logIn" id="logIn">
+            <form method="POST" class="logInForm" id="logInForm">
+                <label  for="Email">Email: </label><input id="logInEmail" type="email" name="Email" /><br/><br/>
+                <label  for="password">Password: </label><input id="logInPassword" type="password" name="password" /><br/><br/>
+                <button id="btnLogInForm" type="submit">Log In</button><br/><br/>
+                <p id="errorLogIn"></p>
+            </form>
+            
+        </div>
+        <div class="dashboard" id="dashboard">
+            <div class="todos" id="todos">
+                <button id="btnToDos" class="btnToDos">Create New to-do List button</button>
+                <button id="logOut" class="logOut" onclick="logOut()">Log Out</button>
+                <button id="account" class="account" onclick="accountSettigs()">Account Settings</button>
+            </div>
+            <div class="lists" id="dashList">
+                <h1>This is Your TODOs</h1>
+            </div>
+        </div>
+        <div id="manageToDo">
+
+        </div>
+        <div class="toDoList" id="toDoList">
+            <div class="buttons">
+                <button id="logOut" class="logOut" onclick="logOut()">Log Out</button>
+                <button class="btnDash" onclick="dash()">Dashboard</button>
+            </div>
+            <div class="content">
+                <h1>
+                    Create your ToDos here!
+                </h1>
+                <div>
+                    <form method="POST" id="toDoNameForm">
+                        <label for="toDoName">Enter your ToDo Title: </label><input type="text" id="toDoNameTitle" />
+                        <button id="saveName">Create</button>
+                        <p id="nameError"></p>
+                    </form>
+                </div>
+                <br/><br/>
+                <div>
+                    <form class="toDosForm" id="toDosForm" method="POST">
+                        <label for="yourLists">Add your lists of ToDos in here: </label><input type="text" id="yourLists">
+                        <button class="toDoSubmit" type="submit" id="toDoSubmit">Add</button>
+                        <p id="listError" ></p>
+                    </form>
+                </div>
+                <br/>
+                <br/>
+                <div id="listToBeSave">
+                </div>
+                <br/><br/>
+                <div class="savebtn">
+                    <button id="saveAll" onclick="saveToDo(event)">Save</button>
+                    <p id="saveTxt"></p>
+                </div>
+            </div>
+        </div>
+        <div class="settings" id="settings">
+            <div class="buttons">
+                <button id="logOut" class="logOut" onclick="logOut()">Log Out</button>
+                <button class="btnDash" onclick="dash()">Dashboard</button>
+            </div>
+            <br/><br/>
+            <form method="post" class="accountForm" id="accountForm">
+                <label for="accountFirstName">First Name: </label><input id="accountFirstName" type="text" name="firstName" required/><br/><br/>
+                <label for="accountLastName">Last Name: </label><input id="accountLastName" type="text" name="lastName" required/><br/><br/>
+                <label for="accountEmail">Email:</label><input id="accountEmail" type="email" name="email" required /><br/><br/>
+                <label for="accountPass">Password: </label><input id="accountPass" type="password" name="pass" required/><br/><br/>
+                <button class="btnsubmitAccount" id="btnsubmitAccount" type="submit">Save</button>
+                <p id="settingsError"></p>
+            </form>
+        </div>
+    </div>
+<script src="project1.js"></script>
+</body>
+</html>

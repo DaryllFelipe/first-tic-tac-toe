@@ -1,0 +1,32 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.parent{
+    position: relative;
+    margin: auto;
+    text-align: center;
+    width: 90vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+.child{
+    position: relative;
+    width: 30vh;
+    height: 32vh;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    
+}
+.textx{
+    font-size: 10em;
+    font-weight: bolder;
+    color: red;
+}
+.texto{
+    font-size: 10em;
+    font-weight: bolder;
+    color: black;
+}
